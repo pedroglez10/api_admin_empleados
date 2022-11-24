@@ -1,3 +1,7 @@
+## Rest API Admin empleados
+
+ksp_admin_empleados.sql esta es el script BD
+
 ## Configurar accesos DB
     Conexion se encuentra en el archivo classes/Main.php en las siguientes propiedades:
     private $server="localhost";
