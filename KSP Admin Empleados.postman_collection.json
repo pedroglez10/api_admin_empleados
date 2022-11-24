@@ -1,0 +1,327 @@
+{
+	"info": {
+		"_postman_id": "cf7335a2-af99-4b49-8f84-17c996b12e7c",
+		"name": "KSP Admin Empleados",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3840027"
+	},
+	"item": [
+		{
+			"name": "empleados",
+			"item": [
+				{
+					"name": "consulta empleados",
+					"protocolProfileBehavior": {
+						"removeRefererHeaderOnRedirect": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api_admin_empleados/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api_admin_empleados",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consulta empleado id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X_Token",
+								"value": "123",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost/api_admin_empleados/employees/1",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api_admin_empleados",
+								"employees",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inserta empleado",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X_Token",
+								"value": "123",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Alberto\",\r\n    \"role\": \"Developer Back end\",\r\n    \"salary\": 40000,\r\n    \"status\": 1,\r\n    \"hire_date\": \"2022/11/23\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/api_admin_empleados/employees",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api_admin_empleados",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modifica empleado",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X_Token",
+								"value": "123",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Alberto Colin\",\r\n    \"role\": \"Developer Back end\",\r\n    \"salary\": 45000,\r\n    \"status\": 1,\r\n    \"hire_date\": \"2022/11/23\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/api_admin_empleados/employees/3",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api_admin_empleados",
+								"employees",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "elimina empleado",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X_Token",
+								"value": "123",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/api_admin_empleados/employees/3",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api_admin_empleados",
+								"employees",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "beneficiarios",
+			"item": [
+				{
+					"name": "consulta beneficiarios",
+					"protocolProfileBehavior": {
+						"removeRefererHeaderOnRedirect": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api_admin_empleados/employees/1/beneficiaries",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api_admin_empleados",
+								"employees",
+								"1",
+								"beneficiaries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consulta beneficiario id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X_Token",
+								"value": "123",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost/api_admin_empleados/employees/1/beneficiaries/1",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api_admin_empleados",
+								"employees",
+								"1",
+								"beneficiaries",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inserta beneficiario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X_Token",
+								"value": "123",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Pedro Gil García Ramos\",\r\n    \"relationship\": \"Padre\",\r\n    \"birth_date\": \"1960/07/23\",\r\n    \"gender\": \"M\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api_admin_empleados/employees/1/beneficiaries",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api_admin_empleados",
+								"employees",
+								"1",
+								"beneficiaries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modifica beneficiario",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X_Token",
+								"value": "123",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Pedro Gil García Ramos\",\r\n    \"relationship\": \"Padre\",\r\n    \"birth_date\": \"1955/07/23\",\r\n    \"gender\": \"M\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/api_admin_empleados/employees/3/beneficiaries/5",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api_admin_empleados",
+								"employees",
+								"3",
+								"beneficiaries",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "elimina beneficiario",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X_Token",
+								"value": "123",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/api_admin_empleados/employees/3/beneficiaries/5",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api_admin_empleados",
+								"employees",
+								"3",
+								"beneficiaries",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
